@@ -21,7 +21,16 @@ resource "helm_release" "kube_prometheus_stack" {
     templatefile("${path.module}/values.yaml.tpl", {
       grafana_admin_password = var.grafana_admin_password
       grafana_service_type   = var.grafana_service_type
-      storage_size            = var.prometheus_storage_size
+      storage_size           = var.prometheus_storage_size
+    }),
+    yamlencode({
+      alertmanager = {
+        alertmanagerSpec = {
+          # you can leave this empty or add resource limits if you want
+        }
+        config = local.alertmanager_config # reuses the same local defined in alertmanager.tf
+      }
     })
   ]
 }
+
