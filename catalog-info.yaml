@@ -5,6 +5,10 @@ metadata:
   description: Monitoring and observability platform using Prometheus, Grafana, Loki, Alloy, and Alertmanager
   annotations:
     github.com/project-slug: cheating-at-solitaire/terraform-prometheus-grafana
+  links:
+    - url: http://127.0.0.1:3001
+      title: Open Grafana
+      icon: dashboard
 spec:
   type: service
   lifecycle: production
