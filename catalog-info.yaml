@@ -9,6 +9,9 @@ metadata:
     - url: http://127.0.0.1:3001
       title: Open Grafana
       icon: dashboard
+    - url: http://127.0.0.1:9090
+      title: Open Prometheus
+      icon: dashboard
 spec:
   type: service
   lifecycle: production
