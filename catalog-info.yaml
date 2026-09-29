@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: observability
+  description: Monitoring and observability platform using Prometheus, Grafana, Loki, Alloy, and Alertmanager
+  annotations:
+    github.com/project-slug: cheating-at-solitaire/terraform-prometheus-grafana
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: developer-platform
